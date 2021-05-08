@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:soundcourse/constants/color_constants.dart';
 
 class CategoryButtonHomepage extends StatelessWidget {
@@ -19,16 +20,9 @@ class CategoryButtonHomepage extends StatelessWidget {
               child: SizedBox(
                 width: 119,
                 height: 35,
-                child: Container(
-                  decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black12,
-                        blurRadius: 4,
-                        spreadRadius: 2,
-                        offset: Offset(2, 2), // Shadow position
-                      ),
-                    ],
+                child: Neumorphic(
+                  style: NeumorphicStyle(
+                    shape: NeumorphicShape.concave,
                   ),
                   child: ElevatedButton(
                       onPressed: () {},
@@ -59,16 +53,9 @@ class CategoryButtonHomepage extends StatelessWidget {
               child: SizedBox(
                 width: 117,
                 height: 35,
-                child: Container(
-                  decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black12,
-                        blurRadius: 4,
-                        spreadRadius: 2,
-                        offset: Offset(2, 2), // Shadow position
-                      ),
-                    ],
+                child: Neumorphic(
+                  style: NeumorphicStyle(
+                    shape: NeumorphicShape.concave,
                   ),
                   child: ElevatedButton(
                       onPressed: () {},
@@ -103,16 +90,9 @@ class CategoryButtonHomepage extends StatelessWidget {
               child: SizedBox(
                 width: 95,
                 height: 35,
-                child: Container(
-                  decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black12,
-                        blurRadius: 4,
-                        spreadRadius: 2,
-                        offset: Offset(2, 2), // Shadow position
-                      ),
-                    ],
+                child: Neumorphic(
+                  style: NeumorphicStyle(
+                    shape: NeumorphicShape.concave,
                   ),
                   child: ElevatedButton(
                       onPressed: () {},

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:soundcourse/constants/color_constants.dart';
 
-class TopButtonHomePage extends StatelessWidget {
+class TopButtonChartPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -24,7 +24,7 @@ class TopButtonHomePage extends StatelessWidget {
             width: 50,
             height: 50,
             child: NeumorphicIcon(
-              Icons.menu_sharp,
+              Icons.arrow_back_ios_sharp,
               style: NeumorphicStyle(
                 color: mBackgroundColorUngu,
                 depth: 0,

@@ -1,23 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_neumorphic/flutter_neumorphic.dart';
+import 'package:soundcourse/constants/color_constants.dart';
 
 class LayoutHomepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height / 2.6,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.only(
-            bottomLeft: Radius.circular(20), bottomRight: Radius.circular(20)),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.withOpacity(0.5),
-            spreadRadius: 2,
-            blurRadius: 9,
-            offset: Offset(0, 3), // changes position of shadow
-          ),
-        ],
+    return Neumorphic(
+      style: NeumorphicStyle(
+          shape: NeumorphicShape.concave,
+          boxShape: NeumorphicBoxShape.roundRect(BorderRadius.only(
+            bottomRight: Radius.circular(30),
+            bottomLeft: Radius.circular(30),
+          )),
+          depth: 3,
+          intensity: 9,
+          lightSource: LightSource.topLeft,
+          color: mBackgroundColor),
+      child: Container(
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height / 2.6,
       ),
     );
   }

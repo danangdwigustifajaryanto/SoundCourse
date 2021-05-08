@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:soundcourse/constants/color_constants.dart';
+import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
 import 'package:soundcourse/screen/Homepage/homepage_component/card_homepage.dart';
 import 'package:soundcourse/screen/Homepage/homepage_component/categorybutton_homepage.dart';
@@ -15,21 +15,25 @@ class Homepage extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         resizeToAvoidBottomInset: false,
-        backgroundColor: mBackgroundColorGrey,
         body: SafeArea(
-          child: Column(
-            children: <Widget>[
-              Stack(
-                children: <Widget>[
-                  LayoutHomepage(),
-                  TopButtonHomePage(),
-                  TexttopHomepage(),
-                  SearchHomepage(),
-                  CategoryButtonHomepage()
-                ],
-              ),
-              CardHomePage()
-            ],
+          child: Neumorphic(
+            style: NeumorphicStyle(
+                color: Colors.black.withOpacity(0.1),
+                shape: NeumorphicShape.flat),
+            child: Column(
+              children: <Widget>[
+                Stack(
+                  children: <Widget>[
+                    LayoutHomepage(),
+                    TopButtonHomePage(),
+                    TexttopHomepage(),
+                    SearchHomepage(),
+                    CategoryButtonHomepage()
+                  ],
+                ),
+                CardHomePage()
+              ],
+            ),
           ),
         ),
       ),
