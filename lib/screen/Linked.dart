@@ -1,7 +1,7 @@
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
-import 'package:soundcourse/constants/color_constants.dart';
+import 'package:soundcourse/constants/constants.dart';
 import 'package:soundcourse/screen/Chart/Chartpage.dart';
 import 'package:soundcourse/screen/Extrapage/Extra.dart';
 import 'package:soundcourse/screen/Homepage/Homepage.dart';

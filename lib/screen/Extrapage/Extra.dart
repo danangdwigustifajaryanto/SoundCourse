@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:soundcourse/constants/color_constants.dart';
+import 'package:soundcourse/constants/constants.dart';
 
 import 'Extrapage_component/topbutton_extrapage.dart';
 

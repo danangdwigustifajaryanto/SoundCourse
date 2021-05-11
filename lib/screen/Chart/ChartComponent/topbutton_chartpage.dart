@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
-import 'package:soundcourse/constants/color_constants.dart';
+import 'package:soundcourse/constants/constants.dart';
 
 class TopButtonChartPage extends StatelessWidget {
   @override

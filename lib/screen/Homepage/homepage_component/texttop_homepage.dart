@@ -1,30 +1,65 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:soundcourse/constants/size_config.dart';
 
 class TexttopHomepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    double defaultSize = SizeConfig.defaultSize;
     return Container(
-      margin: EdgeInsets.only(top: 110, left: 30),
+      padding: EdgeInsets.only(left: defaultSize * 2.9, top: defaultSize * 11),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.only(right: 33),
-            child: Text(
-              "What makes the",
-              style: GoogleFonts.nunito(
-                  fontSize: 25,
-                  fontWeight: FontWeight.w400,
-                  color: Colors.black.withOpacity(0.5)),
-            ),
+          TitleText(
+            title: "What makes the",
           ),
-          Text("Perfect mixing ?",
-              style: GoogleFonts.nunito(
-                  fontSize: 30,
-                  fontWeight: FontWeight.w600,
-                  color: Colors.black.withOpacity(0.7))),
+          TitleTextSecond(
+            title: "Perfect mixing ?",
+          ),
         ],
       ),
+    );
+  }
+}
+
+class TitleTextSecond extends StatelessWidget {
+  const TitleTextSecond({
+    Key key,
+    this.title,
+  }) : super(key: key);
+
+  final String title;
+
+  @override
+  Widget build(BuildContext context) {
+    double defaultSize = SizeConfig.defaultSize;
+    return Text(title,
+        style: GoogleFonts.nunito(
+            fontSize: defaultSize * 2.9,
+            fontWeight: FontWeight.w600,
+            color: Colors.black.withOpacity(0.7)));
+  }
+}
+
+//Title text 1
+class TitleText extends StatelessWidget {
+  const TitleText({
+    Key key,
+    this.title,
+  }) : super(key: key);
+
+  final String title;
+
+  @override
+  Widget build(BuildContext context) {
+    double defaultSize = SizeConfig.defaultSize;
+    return Text(
+      title,
+      style: GoogleFonts.nunito(
+          fontSize: defaultSize * 2.4,
+          fontWeight: FontWeight.w400,
+          color: Colors.black.withOpacity(0.5)),
     );
   }
 }

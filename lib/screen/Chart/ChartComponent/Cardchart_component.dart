@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:soundcourse/constants/color_constants.dart';
+import 'package:soundcourse/constants/constants.dart';
 
 class CardChartComponent extends StatelessWidget {
   @override

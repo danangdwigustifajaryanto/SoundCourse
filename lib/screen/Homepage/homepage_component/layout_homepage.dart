@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
-import 'package:soundcourse/constants/color_constants.dart';
+import 'package:soundcourse/constants/constants.dart';
+import 'package:soundcourse/constants/size_config.dart';
 
 class LayoutHomepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return Neumorphic(
       style: NeumorphicStyle(
           shape: NeumorphicShape.concave,
@@ -17,8 +19,8 @@ class LayoutHomepage extends StatelessWidget {
           lightSource: LightSource.topLeft,
           color: mBackgroundColor),
       child: Container(
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height / 2.6,
+        width: SizeConfig.screenWidth,
+        height: SizeConfig.defaultSize * 36,
       ),
     );
   }

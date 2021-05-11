@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
+import 'package:soundcourse/constants/size_config.dart';
 
 import 'package:soundcourse/screen/Homepage/homepage_component/card_homepage.dart';
 import 'package:soundcourse/screen/Homepage/homepage_component/categorybutton_homepage.dart';
@@ -11,6 +12,7 @@ import 'package:soundcourse/screen/Homepage/homepage_component/topbutton_homepag
 class Homepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
