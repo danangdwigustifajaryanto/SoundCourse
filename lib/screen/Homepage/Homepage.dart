@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
-import 'package:soundcourse/constants/size_config.dart';
-
 import 'package:soundcourse/screen/Homepage/homepage_component/card_homepage.dart';
 import 'package:soundcourse/screen/Homepage/homepage_component/categorybutton_homepage.dart';
 import 'package:soundcourse/screen/Homepage/homepage_component/layout_homepage.dart';
@@ -9,10 +7,43 @@ import 'package:soundcourse/screen/Homepage/homepage_component/search_homepage.d
 import 'package:soundcourse/screen/Homepage/homepage_component/texttop_homepage.dart';
 import 'package:soundcourse/screen/Homepage/homepage_component/topbutton_homepage.dart';
 
-class Homepage extends StatelessWidget {
+class Homepage extends StatefulWidget {
+  @override
+  _HomepageState createState() => _HomepageState();
+}
+
+class _HomepageState extends State<Homepage> with WidgetsBindingObserver {
+  //Flutter appcycle
+  // InitialState
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addObserver(this);
+  }
+
+// add dispose when in not use stop the state
+  @override
+  void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
+    super.dispose();
+  }
+
+  //
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    super.didChangeAppLifecycleState(state);
+    if (state == AppLifecycleState.inactive) {
+      print("[===>App inactive<===]");
+    }
+    if (state == AppLifecycleState.paused) {
+      print("[===>App Paused<===]");
+    }
+    if (state == AppLifecycleState.resumed) {
+      print("[===>App Resumed<===]");
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
-    SizeConfig().init(context);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(

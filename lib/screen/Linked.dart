@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:soundcourse/constants/constants.dart';
 import 'package:soundcourse/screen/Chart/Chartpage.dart';
-import 'package:soundcourse/screen/Extrapage/Extra.dart';
 import 'package:soundcourse/screen/Homepage/Homepage.dart';
-import 'package:soundcourse/screen/Listpage/Listpage.dart';
-import 'package:soundcourse/screen/Settingpage/Settingpage.dart';
+import 'package:soundcourse/screen/underconstruct.dart';
 
 class Linked extends StatefulWidget {
   Linked([Key key]) : super(key: key);
@@ -25,9 +23,9 @@ class _Linked extends State<Linked> {
         body: [
           Homepage(),
           Chartpage(),
-          Extra(),
-          Listpage(),
-          Settingpage()
+          Underconstruct(),
+          Underconstruct(),
+          Underconstruct(),
         ][selectedPage],
         bottomNavigationBar: SafeArea(
           child: ConvexAppBar(

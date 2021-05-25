@@ -3,12 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:soundcourse/screen/Chart/ChartComponent/Cardchart_component.dart';
-
 import 'ChartComponent/topbutton_chartpage.dart';
+import 'package:soundcourse/constants/size_config.dart';
 
 class Chartpage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
+    double defaultSize = SizeConfig.defaultSize;
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Neumorphic(
@@ -32,11 +34,11 @@ class Chartpage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Container(
-                      margin: EdgeInsets.only(top: 10),
+                      margin: EdgeInsets.only(top: defaultSize),
                       child: Text(
                         "Articles Chart",
                         style: GoogleFonts.nunito(
-                            fontSize: 28,
+                            fontSize: defaultSize * 2.5,
                             fontWeight: FontWeight.w700,
                             color: Colors.black.withOpacity(0.7)),
                       ),
@@ -44,7 +46,7 @@ class Chartpage extends StatelessWidget {
                     Text(
                       "Most popular articles around the world",
                       style: GoogleFonts.nunito(
-                          fontSize: 12,
+                          fontSize: defaultSize * 1.2,
                           fontWeight: FontWeight.w700,
                           color: Colors.black.withOpacity(0.5)),
                     ),

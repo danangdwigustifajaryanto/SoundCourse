@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:soundcourse/constants/constants.dart';
 
-import 'Extrapage_component/topbutton_extrapage.dart';
+// import 'Extrapage_component/topbutton_extrapage.dart';
 
 class Extra extends StatelessWidget {
   @override
@@ -16,12 +16,7 @@ class Extra extends StatelessWidget {
           child: Stack(
             children: <Widget>[
               Column(
-                children: <Widget>[
-                  TopButtonExtraPage(),
-                ],
-              ),
-              Center(
-                child: Text("Extra Page </> Argenta 2021"),
+                children: <Widget>[],
               ),
             ],
           ),
