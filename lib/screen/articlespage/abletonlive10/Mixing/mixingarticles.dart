@@ -19,7 +19,7 @@ class _MixingarticleabletonState extends State<Mixingarticleableton> {
       color: Colors.black.withOpacity(0.1),
       child: Stack(
         children: <Widget>[
-          TopButtonAbletonMain(),
+          // TopButtonAbletonMain(),
           Padding(
             padding: EdgeInsets.only(bottom: defaultSize * 50),
             child: Center(

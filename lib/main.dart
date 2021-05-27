@@ -5,9 +5,8 @@ import 'package:soundcourse/screen/Linked.dart';
 
 void main(List<String> arguments) {
   // server.start();
-  // await Firebase.initializeApp();
+  // await Firebase.initializeApp(
   //crashlytics
   // FirebaseCrashlytics.instance.crash();
-
   runApp(Linked());
 }

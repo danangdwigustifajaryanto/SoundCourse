@@ -1,4 +1,4 @@
-import 'package:convex_bottom_bar/convex_bottom_bar.dart';
+import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:soundcourse/constants/constants.dart';
@@ -7,68 +7,68 @@ import 'package:soundcourse/screen/Homepage/Homepage.dart';
 import 'package:soundcourse/screen/underconstruct.dart';
 
 class Linked extends StatefulWidget {
-  Linked([Key key]) : super(key: key);
   @override
-  _Linked createState() => _Linked();
+  _LinkedState createState() => _LinkedState();
 }
 
-class _Linked extends State<Linked> {
-  int selectedPage = 0;
+List listOfpage = [
+  Homepage(),
+  Chartpage(),
+  Underconstruct(),
+  Underconstruct(),
+];
+
+class _LinkedState extends State<Linked> {
+  int currentindex = 0;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        resizeToAvoidBottomInset: false,
-        body: [
-          Homepage(),
-          Chartpage(),
-          Underconstruct(),
-          Underconstruct(),
-          Underconstruct(),
-        ][selectedPage],
-        bottomNavigationBar: SafeArea(
-          child: ConvexAppBar(
-            style: TabStyle.reactCircle,
-            items: [
-              TabItem(icon: Icons.home, title: 'Home'),
-              TabItem(icon: Icons.assignment, title: 'Category'),
-              TabItem(icon: Icons.add_circle, title: 'Extra'),
-              TabItem(icon: Icons.note_add, title: 'List'),
-              TabItem(icon: Icons.settings, title: 'Seting'),
-            ],
-            initialActiveIndex: 0,
-            onTap: (int i) {
-              setState(() {
-                selectedPage = i;
-              });
-            },
-            color: mBackgroundColorGrey,
-            activeColor: mBackgroundColorGrey,
-            backgroundColor: mBackgroundColorUngu.withOpacity(1),
-            elevation: 0,
-          ),
+        bottomNavigationBar: BottomNavyBar(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          containerHeight: 70,
+          itemCornerRadius: 30,
+          backgroundColor: mBackgroundColorUngu,
+          animationDuration: Duration(milliseconds: 500),
+          selectedIndex: currentindex,
+          showElevation: true,
+          curve: Curves.ease,
+          onItemSelected: (index) {
+            setState(() {
+              currentindex = index;
+            });
+          },
+          items: [
+            BottomNavyBarItem(
+              icon: Icon(Icons.home),
+              title: Text("Home"),
+              activeColor: mBackgroundColor,
+              inactiveColor: mBackgroundColor,
+            ),
+            BottomNavyBarItem(
+              icon: Icon(Icons.list_alt),
+              title: Text("Chart"),
+              activeColor: mBackgroundColor,
+              inactiveColor: mBackgroundColor,
+            ),
+            BottomNavyBarItem(
+              icon: Icon(Icons.book_online_sharp),
+              title: Text("Bookmark"),
+              activeColor: mBackgroundColor,
+              inactiveColor: mBackgroundColor,
+            ),
+            BottomNavyBarItem(
+              icon: Icon(Icons.settings),
+              title: Text("Settings"),
+              activeColor: mBackgroundColor,
+              inactiveColor: mBackgroundColor,
+            ),
+          ],
         ),
+        body: listOfpage[currentindex],
       ),
     );
   }
 }
-
-class Style extends StyleHook {
-  @override
-  double get activeIconSize => 40;
-
-  @override
-  double get activeIconMargin => 1;
-
-  @override
-  double get iconSize => 10;
-
-  @override
-  TextStyle textStyle(Color color) {
-    return TextStyle(
-        fontSize: 13, color: mBackgroundColorUngu.withOpacity(0.8));
-  }
-}
-
 // style

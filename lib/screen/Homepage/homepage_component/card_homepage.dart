@@ -94,7 +94,7 @@ class CardHomePage extends StatelessWidget {
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) =>
-                                                mainableton()),
+                                                Mainableton()),
                                       );
                                     },
                                     style: ElevatedButton.styleFrom(
