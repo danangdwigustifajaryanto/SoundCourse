@@ -1,5 +1,7 @@
 # Soundcourse
-Selamat Datang teman-teman di Pengembangan Mobile App SoundcOurse.
+Welcome to soundcourse repository 
+
+![Promo](Promo.png)
 
 List source code.
 - Main App.
