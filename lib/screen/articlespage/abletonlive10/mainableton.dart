@@ -5,7 +5,6 @@ import 'package:soundcourse/constants/constants.dart';
 import 'package:soundcourse/screen/articlespage/abletonlive10/componentabletonlive/cardmainableton.dart';
 import 'package:soundcourse/screen/articlespage/abletonlive10/componentabletonlive/topbuttonabletonmain.dart';
 import 'package:soundcourse/constants/size_config.dart';
-import 'package:soundcourse/screen/underconstruct.dart';
 
 // ignore: camel_case_types
 class Mainableton extends StatelessWidget {
@@ -19,11 +18,7 @@ class Mainableton extends StatelessWidget {
         color: Colors.black.withOpacity(0.1),
         child: Stack(
           children: <Widget>[
-            Row(
-              children: <Widget>[
-                TopButtonAbletonMain(),
-              ],
-            ),
+            TopButtonAbletonMain(),
             Padding(
               padding: EdgeInsets.only(bottom: defaultSize * 40),
               child: Center(
@@ -245,36 +240,6 @@ class Mainableton extends StatelessWidget {
                       children: <Widget>[
                         Center(
                           child: Neumorphic(
-                            margin: EdgeInsets.only(right: defaultSize * 15),
-                            style: NeumorphicStyle(
-                              shape: NeumorphicShape.concave,
-                              boxShape: NeumorphicBoxShape.roundRect(
-                                  BorderRadius.circular(11)),
-                              depth: 3,
-                              intensity: 9,
-                              lightSource: LightSource.topLeft,
-                            ),
-                            child: InkWell(
-                              onTap: () => print("Container pressed"),
-                              child: Container(
-                                alignment: Alignment.center,
-                                width: defaultSize * 9,
-                                height: defaultSize * 3.5,
-                                child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: <Widget>[
-                                      Text(
-                                        "Installation",
-                                        style: TextStyle(
-                                            color: mBackgroundColorUngu),
-                                      )
-                                    ]),
-                              ),
-                            ),
-                          ),
-                        ),
-                        Center(
-                          child: Neumorphic(
                             margin: EdgeInsets.only(left: defaultSize * 15),
                             style: NeumorphicStyle(
                               shape: NeumorphicShape.concave,
@@ -298,6 +263,40 @@ class Mainableton extends StatelessWidget {
                                       children: <Widget>[
                                         Text(
                                           "Arraging",
+                                          style: TextStyle(
+                                              color: mBackgroundColorUngu),
+                                        )
+                                      ]),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        Center(
+                          child: Neumorphic(
+                            margin: EdgeInsets.only(right: defaultSize * 15),
+                            style: NeumorphicStyle(
+                              shape: NeumorphicShape.concave,
+                              boxShape: NeumorphicBoxShape.roundRect(
+                                  BorderRadius.circular(11)),
+                              depth: 3,
+                              intensity: 9,
+                              lightSource: LightSource.topLeft,
+                            ),
+                            child: Material(
+                              color: mBackgroundColor,
+                              child: InkWell(
+                                onTap: () => print("Container pressed"),
+                                child: Container(
+                                  alignment: Alignment.center,
+                                  width: defaultSize * 9,
+                                  height: defaultSize * 3.5,
+                                  child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: <Widget>[
+                                        Text(
+                                          "Preparation",
                                           style: TextStyle(
                                               color: mBackgroundColorUngu),
                                         )

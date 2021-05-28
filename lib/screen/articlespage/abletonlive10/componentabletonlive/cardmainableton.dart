@@ -4,7 +4,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:soundcourse/constants/constants.dart';
 import 'package:soundcourse/constants/size_config.dart';
 import 'package:soundcourse/screen/articlespage/abletonlive10/Mixing/mixingarticles.dart';
-import 'package:soundcourse/screen/underconstruct.dart';
 import 'dart:math' as math;
 
 class Cardmainableton extends StatelessWidget {
@@ -72,12 +71,13 @@ class Cardmainableton extends StatelessWidget {
                                   width: defaultSize * 7,
                                 ),
                               ),
-                              GestureDetector(
+                              InkWell(
                                 onTap: () {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => Underconstruct()),
+                                        builder: (context) =>
+                                            Mixingarticleableton()),
                                   );
                                 },
                                 child: Container(

@@ -8,7 +8,7 @@ class TopButtonAbletonMain extends StatelessWidget {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     double defaultSize = SizeConfig.defaultSize;
-    return Expanded(
+    return SafeArea(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[

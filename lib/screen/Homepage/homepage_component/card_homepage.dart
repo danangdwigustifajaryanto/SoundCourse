@@ -195,32 +195,34 @@ class CardHomePage extends StatelessWidget {
                                 style: NeumorphicStyle(
                                   shape: NeumorphicShape.concave,
                                 ),
-                                child: ElevatedButton(
-                                    onPressed: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                Underconstruct()),
-                                      );
-                                    },
-                                    style: ElevatedButton.styleFrom(
-                                      primary: mBackgroundColorUngu,
-                                      textStyle: TextStyle(
-                                        fontSize: defaultSize * 1.2,
-                                      ),
-                                    ),
-                                    child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceAround,
-                                      children: <Widget>[
-                                        Icon(
-                                          Icons.read_more_sharp,
-                                          size: defaultSize * 1.6,
+                                child: InkWell(
+                                  child: ElevatedButton(
+                                      onPressed: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  Underconstruct()),
+                                        );
+                                      },
+                                      style: ElevatedButton.styleFrom(
+                                        primary: mBackgroundColorUngu,
+                                        textStyle: TextStyle(
+                                          fontSize: defaultSize * 1.2,
                                         ),
-                                        Text("Read More")
-                                      ],
-                                    )),
+                                      ),
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceAround,
+                                        children: <Widget>[
+                                          Icon(
+                                            Icons.read_more_sharp,
+                                            size: defaultSize * 1.6,
+                                          ),
+                                          Text("Read More")
+                                        ],
+                                      )),
+                                ),
                               ),
                             )
                           ],
@@ -304,32 +306,34 @@ class CardHomePage extends StatelessWidget {
                                 style: NeumorphicStyle(
                                   shape: NeumorphicShape.concave,
                                 ),
-                                child: ElevatedButton(
-                                    onPressed: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                Underconstruct()),
-                                      );
-                                    },
-                                    style: ElevatedButton.styleFrom(
-                                      primary: mBackgroundColorUngu,
-                                      textStyle: TextStyle(
-                                        fontSize: defaultSize * 1.2,
-                                      ),
-                                    ),
-                                    child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceAround,
-                                      children: <Widget>[
-                                        Icon(
-                                          Icons.read_more_sharp,
-                                          size: defaultSize * 1.6,
+                                child: InkWell(
+                                  child: ElevatedButton(
+                                      onPressed: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  Underconstruct()),
+                                        );
+                                      },
+                                      style: ElevatedButton.styleFrom(
+                                        primary: mBackgroundColorUngu,
+                                        textStyle: TextStyle(
+                                          fontSize: defaultSize * 1.2,
                                         ),
-                                        Text("Read More")
-                                      ],
-                                    )),
+                                      ),
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceAround,
+                                        children: <Widget>[
+                                          Icon(
+                                            Icons.read_more_sharp,
+                                            size: defaultSize * 1.6,
+                                          ),
+                                          Text("Read More")
+                                        ],
+                                      )),
+                                ),
                               ),
                             )
                           ],

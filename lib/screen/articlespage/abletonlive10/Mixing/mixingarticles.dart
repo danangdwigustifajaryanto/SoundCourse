@@ -15,44 +15,44 @@ class _MixingarticleabletonState extends State<Mixingarticleableton> {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     double defaultSize = SizeConfig.defaultSize;
-    return Container(
-      color: Colors.black.withOpacity(0.1),
-      child: Stack(
-        children: <Widget>[
-          // TopButtonAbletonMain(),
-          Padding(
-            padding: EdgeInsets.only(bottom: defaultSize * 50),
-            child: Center(
-              child:
-                  Image(image: AssetImage('assets/images/abletonheader.png')),
+    return SafeArea(
+      child: Container(
+        color: Colors.black.withOpacity(0.1),
+        child: Stack(
+          children: <Widget>[
+            TopButtonAbletonMain(),
+            Padding(
+              padding: EdgeInsets.only(bottom: defaultSize * 50),
+              child: Center(
+                child:
+                    Image(image: AssetImage('assets/images/abletonheader.png')),
+              ),
             ),
-          ),
-          // Barr
+            // Barr
 
-          ListView(
-            children: <Widget>[
-              Neumorphic(
-                style: NeumorphicStyle(
-                    shape: NeumorphicShape.flat,
-                    boxShape: NeumorphicBoxShape.roundRect(BorderRadius.only(
-                      topRight: Radius.circular(30),
-                      topLeft: Radius.circular(30),
-                    )),
-                    depth: 3,
-                    intensity: 9,
-                    lightSource: LightSource.bottomLeft,
-                    color: Colors.white),
-                //Whiteboard
-                margin: EdgeInsets.only(top: defaultSize * 25),
-                child: Column(
-                  children: <Widget>[
-                    Container(
-                      color: Colors.transparent,
-                      margin: EdgeInsets.only(
-                          top: defaultSize * 3,
-                          left: defaultSize * 2.5,
-                          right: defaultSize * 2.5),
-                      child: Expanded(
+            ListView(
+              children: <Widget>[
+                Neumorphic(
+                  style: NeumorphicStyle(
+                      shape: NeumorphicShape.flat,
+                      boxShape: NeumorphicBoxShape.roundRect(BorderRadius.only(
+                        topRight: Radius.circular(30),
+                        topLeft: Radius.circular(30),
+                      )),
+                      depth: 3,
+                      intensity: 9,
+                      lightSource: LightSource.bottomLeft,
+                      color: Colors.white),
+                  //Whiteboard
+                  margin: EdgeInsets.only(top: defaultSize * 25),
+                  child: Column(
+                    children: <Widget>[
+                      Container(
+                        color: Colors.transparent,
+                        margin: EdgeInsets.only(
+                            top: defaultSize * 3,
+                            left: defaultSize * 2.5,
+                            right: defaultSize * 2.5),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
@@ -163,14 +163,14 @@ class _MixingarticleabletonState extends State<Mixingarticleableton> {
                           ],
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
-              ),
-            ],
-          ),
-          TopButtonAbletonMain(),
-        ],
+              ],
+            ),
+            TopButtonAbletonMain(),
+          ],
+        ),
       ),
     );
   }
