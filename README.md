@@ -8,6 +8,8 @@ Features
 - Usefull hashtag for each category
 - Search bar
 - Articles chart
+- Fully responsive for each mobile device
+- Maintaince pages
 
 Tools
 - Android Studio 4.2.1
@@ -15,5 +17,8 @@ Tools
 - Dart 2.7
 - Figma 95.8.0:
 - Photosop CC 2018
+
+Download the app
+Soon ---
 
 © Argenta 2021
