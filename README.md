@@ -18,7 +18,4 @@ Tools
 - Figma 95.8.0:
 - Photosop CC 2018
 
-Download the app
-Soon ---
-
 © Argenta 2021
