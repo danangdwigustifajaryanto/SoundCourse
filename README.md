@@ -1,6 +1,6 @@
 <h1 align=“center”>SoundCourse</h1>
 
-<p align=“center”>This is an application of my learning flutter and implementing UI UX neomorphism ui that is clean. This application contains a guide on how to make music using various software and digital audio. This application also has hashtags and categories that are clear referring to what software is being used.</p>
+<p align=“center”>This is an application of my studying flutter and implementing clean UI UX neomorphism ui. This program includes a tutorial on how to create music using various applications and digital audio. This application also has hashtags and categories that clearly indicate which program is being utilized.</p>
 
 ![Promo](Promo.png)
 
